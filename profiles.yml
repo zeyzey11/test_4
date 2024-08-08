@@ -1,0 +1,16 @@
+test_4:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost # Remplacez par l'adresse de votre serveur PostgreSQL
+      user: hiveuser # Utilisateur de la base de données PostgreSQL
+      password: hivepassword # Mot de passe de l'utilisateur PostgreSQL
+      port: 5432 # Port de votre serveur PostgreSQL (par défaut, c'est 5432)
+      dbname: hive # Nom de la base de données PostgreSQL utilisée par Hive
+      schema: public # Schéma par défaut où les tables seront créées
+      threads: 1 # Nombre de threads à utiliser
+      keepalives_idle: 0
+      connect_timeout: 10
+      search_path: public # Schéma de recherche pour PostgreSQL
+      role: null
